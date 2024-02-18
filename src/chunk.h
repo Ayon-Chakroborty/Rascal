@@ -1,5 +1,5 @@
-#ifndef rascal_chunk_h
-#define rascal_chunk_h
+#ifndef wizpp_chunk_h
+#define wizpp_chunk_h
 
 #include "common.h"
 #include "value.h"

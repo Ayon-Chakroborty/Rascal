@@ -1,5 +1,5 @@
-#ifndef rascal_debug_h
-#define rascal_debug_h
+#ifndef wizpp_debug_h
+#define wizpp_debug_h
 
 #include "chunk.h"
 

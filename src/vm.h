@@ -1,5 +1,5 @@
-#ifndef rascal_vm_h
-#define rascal_vm_h
+#ifndef wizpp_vm_h
+#define wizpp_vm_h
 
 #include "chunk.h"
 #include "value.h"
@@ -21,7 +21,7 @@ typedef enum {
 
 void initVM();
 void freeVM();
-InterpretResult interpret(Chunk* chunk);
+InterpretResult interpret(const char* source);
 void push(Value value);
 Value pop();
 

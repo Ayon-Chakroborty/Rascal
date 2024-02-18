@@ -1,5 +1,5 @@
-#ifndef rascal_memory_h
-#define rascal_memory_h
+#ifndef wizpp_memory_h
+#define wizpp_memory_h
 
 #include "common.h"
 

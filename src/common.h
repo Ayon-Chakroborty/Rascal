@@ -1,5 +1,5 @@
-#ifndef rascal_common_h
-#define rascal_common_h
+#ifndef wizpp_common_h
+#define wizpp_common_h
 
 #include <stdbool.h>
 #include <stddef.h>
