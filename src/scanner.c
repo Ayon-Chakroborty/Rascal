@@ -119,17 +119,16 @@ static TokenType checkKeyword(int start, int len, const char* rest, TokenType ty
 
 static TokenType identifierType(){
     switch(scanner.start[0]){
-        case 'a' : return checkKeyWord(1, 2, "nd", TOKEN_AND);
-        case 'c' : return checkKeyWord(1, 4, "lass", TOKEN_CLASS);
-        case 'e' : return checkKeyWord(1, 3, "lse", TOKEN_ELSE);
-        case 'i' : return checkKeyWord(1, 1, "f", TOKEN_IF);
-        case 'n' : return checkKeyWord(1, 2, "il", TOKEN_NIL);
-        case 'o' : return checkKeyWord(1, 1, "r", TOKEN_OR);
-        case 'p' : return checkKeyWord(1, 4, "rint", TOKEN_PRINT);
-        case 'r' : return checkKeyWord(1, 5, "eturn", TOKEN_RETURN);
-        case 's' : return checkKeyWord(1, 4, "upre", TOKEN_SUPER);
-        case 'v' : return checkKeyWord(1, 2, "ar", TOKEN_VAR);
-        case 'w' : return checkKeyWord(1, 4, "hile", TOKEN_WHILE);
+        case 'a' : return checkKeyword(1, 4, "lass", TOKEN_CLASS);
+        case 'e' : return checkKeyword(1, 3, "lse", TOKEN_ELSE);
+        case 'i' : return checkKeyword(1, 1, "f", TOKEN_IF);
+        case 'n' : return checkKeyword(1, 2, "il", TOKEN_NIL);
+        case 'o' : return checkKeyword(1, 1, "r", TOKEN_OR);
+        case 'p' : return checkKeyword(1, 4, "rint", TOKEN_PRINT);
+        case 'r' : return checkKeyword(1, 5, "eturn", TOKEN_RETURN);
+        case 's' : return checkKeyword(1, 4, "upre", TOKEN_SUPER);
+        case 'v' : return checkKeyword(1, 2, "ar", TOKEN_VAR);
+        case 'w' : return checkKeyword(1, 4, "hile", TOKEN_WHILE);
         case 'f':
             if(scanner.current - scanner.start > 1){
                 switch(scanner.start[1]){
@@ -164,7 +163,7 @@ static Token number(){
         advance();
     }
 
-    if(peen() == '.' && isDigit(peekNext())){
+    if(peek() == '.' && isDigit(peekNext())){
         advance();
 
         while(isDigit(peek())){
